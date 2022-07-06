@@ -81,10 +81,28 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Contenuto Parte Pubblica
                 </div>
 
                 <h1> trovo la parte  pubblica</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">#ID</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Azioni</th>
+                        </tr>
+                    </thead>
+                </table>
+                @foreach ($posts as $post)
+                    <tbody>
+                        <tr>
+                            <th scope="row">{{$post->id}}</th>
+                            <th >{{$post->title}}</th>
+                            <th >BOTTONE</th>
+                        </tr>
+                    </tbody>
+                @endforeach
             </div>
         </div>
     </body>
